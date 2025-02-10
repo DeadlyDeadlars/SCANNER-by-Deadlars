@@ -9,7 +9,9 @@ This script is designed for convenient scanning of an internet resource (website
 
    `cd SCANNER-BY-DEADLARS`
 
-   `bash scan.sh`
+   `chmod +x scan.sh` 
 
+   `./scan.bash`
+   
 ### Фото и примеры использования: 
-добавлю чуть позже, как и сам скрипт.
+
