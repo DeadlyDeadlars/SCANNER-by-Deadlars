@@ -69,7 +69,7 @@ localize() {
         ports_found="Найдены открытые порты!"
         ports_not_found="Открытые порты не найдены."
         final_info="=== Итоговая информация ==="
-         domain_label="Домен:"
+        domain_label="Домен:"
         ip_label="IP-адрес:"
         subdomains_label="=== Найденные поддомены ==="
         ports_label="=== Открытые порты и службы ==="
@@ -131,7 +131,7 @@ scan_single_domain() {
     nmap_output=$(cat /tmp/nmap_output.txt)
     rm -f /tmp/nmap_output.txt
 
-    open_ports=$(echo "$nmap_output" | grep '^[0-9]' | awk '{print "Порт: " $1, "Служба: " $3, "Версия: " $4, $5}' | tr '\n'>
+    open_ports=$(echo "$nmap_output" | grep '^[0-9]' | awk '{print "Порт: " $1, "Служба: " $3, "Версия: " $4, $5}' | tr '\n' ';' | sed 's/;$//')
     os_info=$(echo "$nmap_output" | grep -i "OS details" | sed 's/OS details: //')
 
     if [ -z "$open_ports" ]; then
@@ -179,7 +179,7 @@ scan_multiple_domains() {
         nmap_output=$(cat /tmp/nmap_output.txt)
         rm -f /tmp/nmap_output.txt
 
-        open_ports=$(echo "$nmap_output" | grep '^[0-9]' | awk '{print "Порт: " $1, "Служба: " $3, "Версия: " $4, $5}' | tr >
+        open_ports=$(echo "$nmap_output" | grep '^[0-9]' | awk '{print "Порт: " $1, "Служба: " $3, "Версия: " $4, $5}' | tr '\n' ';' | sed 's/;$//')
         os_info=$(echo "$nmap_output" | grep -i "OS details" | sed 's/OS details: //')
 
         if [ -z "$open_ports" ]; then
