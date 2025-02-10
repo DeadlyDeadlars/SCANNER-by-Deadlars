@@ -4,8 +4,8 @@
 ### EN: 
 This script is designed for convenient scanning of an internet resource (website, application, server). It utilizes tools like dig, subdomain, and nmap to find the resource’s IP address, its subdomains, and open ports (port number, its type, and the OS installed on it).
 ### Установка: 
-   ` git clone https://DeadlyDeadlars/SCANNER-BY-DEADLARS/
-   cd SCANNER-BY-DEADLARS 
-   bash scan.sh`
+   ` git clone https://github.com/DeadlyDeadlars/SCANNER-by-Deadlars`
+   `cd SCANNER-BY-DEADLARS 
+   `bash scan.sh`
 ### Фото и примеры использования: 
 добавлю чуть позже, как и сам скрипт.
