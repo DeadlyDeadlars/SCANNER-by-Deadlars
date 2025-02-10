@@ -13,5 +13,4 @@ This script is designed for convenient scanning of an internet resource (website
 
    `./scan.bash`
    
-### Фото и примеры использования: 
 
